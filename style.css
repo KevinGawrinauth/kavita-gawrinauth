@@ -393,33 +393,30 @@ a {
 .contact-page-links {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
   align-items: center;
   text-align: center;
 }
 
-.contact-page-item,
-.contact-page-links a {
+.contact-page-item {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: 16px;
   color: #2d241d;
   text-decoration: none;
-  font-size: 1.22rem;
+  font-size: 1.24rem;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.contact-page-item i,
-.contact-page-links i {
+.contact-page-item i {
   color: #a97327;
-  font-size: 1.35rem;
-  width: 28px;
+  font-size: 1.45rem;
+  width: 32px;
   text-align: center;
 }
 
-.contact-page-item:hover,
-.contact-page-links a:hover {
+.contact-page-item:hover {
   color: #9f6d25;
   transform: translateY(-2px);
 }
