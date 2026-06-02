@@ -13,6 +13,7 @@ html {
 }
 
 body {
+  min-height: 100vh;
   background-color: #f5f1e8;
   color: #2d241d;
   font-family: "Inter", Arial, sans-serif;
@@ -25,6 +26,13 @@ img {
 
 a {
   color: inherit;
+}
+
+/* Makes footer/banner stay at bottom on shorter pages */
+main {
+  min-height: calc(100vh - 82px);
+  display: flex;
+  flex-direction: column;
 }
 
 /* =========================================================
@@ -93,7 +101,7 @@ a {
 .hero-section {
   display: grid;
   grid-template-columns: 48% 52%;
-  min-height: calc(100vh - 82px);
+  min-height: 680px;
   background-color: #f7f3eb;
   border-bottom: 1px solid #e1d7c8;
 }
@@ -102,17 +110,17 @@ a {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding: 42px 28px 0;
+  padding: 38px 28px 0;
 }
 
 .arch-frame {
   width: 100%;
-  max-width: 560px;
-  height: min(690px, calc(100vh - 110px));
-  min-height: 560px;
+  max-width: 520px;
+  height: 620px;
+  min-height: 520px;
   background-color: #ece5db;
   border: 2px solid #e5dbcc;
-  border-radius: 280px 280px 0 0;
+  border-radius: 260px 260px 0 0;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
@@ -131,7 +139,7 @@ a {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 56px 72px 56px 46px;
+  padding: 42px 68px 42px 46px;
   background-color: #f8f4ec;
   overflow: hidden;
 }
@@ -161,7 +169,7 @@ a {
 
 .hero-text-inner h1 {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(3.3rem, 5vw, 5rem);
+  font-size: clamp(3.2rem, 5vw, 5rem);
   font-weight: 500;
   line-height: 1.02;
   margin-bottom: 18px;
@@ -170,7 +178,7 @@ a {
 
 .hero-subtitle {
   font-family: "Inter", Arial, sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   letter-spacing: 0.17em;
   text-transform: uppercase;
   color: #b17f39;
@@ -187,7 +195,7 @@ a {
 
 .hero-text-inner p {
   font-family: "Inter", Arial, sans-serif;
-  font-size: 1.08rem;
+  font-size: 1.05rem;
   color: #3b3027;
   margin-bottom: 22px;
   max-width: 600px;
@@ -354,22 +362,24 @@ a {
 }
 
 /* =========================================================
-   Reusable Bottom Contact Banner
-   Full image visible, wide, and flush at page bottom.
+   Bottom Contact Banner / Footer Image
+   Hofstra-style: full width, flush bottom, edge to edge.
 ========================================================= */
 
 .contact-section {
   background-color: #f5f1e8;
-  padding: 75px 0 0;
+  padding: 70px 0 0;
+  margin-top: auto;
   border-top: 1px solid #e6dccd;
+  width: 100%;
 }
 
 .contact-banner-wrap {
   display: block;
-  width: min(97vw, 1650px);
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   text-decoration: none;
-  overflow: visible;
 }
 
 .contact-banner-image {
@@ -378,7 +388,7 @@ a {
   display: block;
 }
 
-/* Hide old overlay/card if any page still has older contact HTML */
+/* Hide old overlay/card if older contact HTML still exists */
 .contact-overlay,
 .contact-overlay-card,
 .contact-label,
@@ -387,7 +397,7 @@ a {
 }
 
 /* =========================================================
-   Contact Page
+   Contact Page Links
 ========================================================= */
 
 .contact-page-links {
@@ -398,7 +408,8 @@ a {
   text-align: center;
 }
 
-.contact-page-item {
+.contact-page-item,
+.contact-page-links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -409,14 +420,16 @@ a {
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.contact-page-item i {
+.contact-page-item i,
+.contact-page-links i {
   color: #a97327;
   font-size: 1.45rem;
   width: 32px;
   text-align: center;
 }
 
-.contact-page-item:hover {
+.contact-page-item:hover,
+.contact-page-links a:hover {
   color: #9f6d25;
   transform: translateY(-2px);
 }
@@ -509,10 +522,6 @@ a {
     max-width: 500px;
     min-height: 540px;
   }
-
-  .contact-banner-wrap {
-    width: 97vw;
-  }
 }
 
 @media (max-width: 1050px) {
@@ -558,6 +567,10 @@ a {
 ========================================================= */
 
 @media (max-width: 900px) {
+  main {
+    min-height: calc(100vh - 130px);
+  }
+
   .site-header {
     padding: 20px 16px;
   }
@@ -643,11 +656,7 @@ a {
   }
 
   .contact-section {
-    padding: 52px 0 0;
-  }
-
-  .contact-banner-wrap {
-    width: 98vw;
+    padding: 48px 0 0;
   }
 
   .contact-banner-image {
@@ -748,10 +757,6 @@ a {
 
   .contact-section {
     padding: 38px 0 0;
-  }
-
-  .contact-banner-wrap {
-    width: 99vw;
   }
 
   .contact-page-links {
