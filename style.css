@@ -98,8 +98,6 @@ a {
   border-bottom: 1px solid #e1d7c8;
 }
 
-/* Left Image Side */
-
 .hero-image-column {
   display: flex;
   justify-content: center;
@@ -129,8 +127,6 @@ a {
   display: block;
 }
 
-/* Right Text Side */
-
 .hero-text-column {
   position: relative;
   display: flex;
@@ -140,7 +136,6 @@ a {
   overflow: hidden;
 }
 
-/* Subtle arch-inspired pattern */
 .hero-text-column::before {
   content: "";
   position: absolute;
@@ -231,7 +226,6 @@ a {
   overflow: hidden;
 }
 
-/* Very subtle pattern on inner page headers */
 .page-hero::before {
   content: "";
   position: absolute;
@@ -361,18 +355,19 @@ a {
 
 /* =========================================================
    Reusable Bottom Contact Banner
-   Use this on every page.
+   Wide, shorter, and professional across all pages.
 ========================================================= */
 
 .contact-section {
   background-color: #f5f1e8;
-  padding: 70px 0 80px;
+  padding: 95px 0 45px;
   border-top: 1px solid #e6dccd;
 }
 
 .contact-banner-wrap {
   display: block;
-  width: min(88vw, 1280px);
+  width: min(94vw, 1500px);
+  height: 310px;
   margin: 0 auto;
   text-decoration: none;
   overflow: hidden;
@@ -380,11 +375,13 @@ a {
 
 .contact-banner-image {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
   display: block;
 }
 
-/* Use only if you still have overlay contact HTML somewhere */
+/* Hide old overlay/card if any page still has older contact HTML */
 .contact-overlay,
 .contact-overlay-card,
 .contact-label,
@@ -399,30 +396,39 @@ a {
 .contact-page-links {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
   align-items: center;
   text-align: center;
 }
 
+.contact-page-item,
 .contact-page-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
   color: #2d241d;
   text-decoration: none;
   font-size: 1.22rem;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.contact-page-links a:hover {
-  color: #9f6d25;
-}
-
+.contact-page-item i,
 .contact-page-links i {
   color: #a97327;
-  margin-right: 10px;
+  font-size: 1.35rem;
+  width: 28px;
+  text-align: center;
+}
+
+.contact-page-item:hover,
+.contact-page-links a:hover {
+  color: #9f6d25;
+  transform: translateY(-2px);
 }
 
 /* =========================================================
    Modal / Pop-Out
-   Keep this only if you still use the About pop-out somewhere.
 ========================================================= */
 
 .modal {
@@ -508,6 +514,11 @@ a {
   .arch-frame {
     max-width: 500px;
     min-height: 540px;
+  }
+
+  .contact-banner-wrap {
+    width: min(94vw, 1400px);
+    height: 290px;
   }
 }
 
@@ -639,14 +650,20 @@ a {
   }
 
   .contact-section {
-    padding: 52px 0 58px;
+    padding: 62px 0 38px;
   }
 
   .contact-banner-wrap {
-    width: min(94vw, 1280px);
+    width: 94vw;
+    height: 230px;
   }
 
-  .contact-page-links a {
+  .contact-banner-image {
+    object-position: left center;
+  }
+
+  .contact-page-links a,
+  .contact-page-item {
     font-size: 1.08rem;
   }
 
@@ -737,11 +754,16 @@ a {
   }
 
   .contact-section {
-    padding: 42px 0 48px;
+    padding: 50px 0 32px;
   }
 
   .contact-banner-wrap {
     width: 95vw;
+    height: 190px;
+  }
+
+  .contact-banner-image {
+    object-position: left center;
   }
 
   .contact-page-links {
@@ -749,7 +771,8 @@ a {
     text-align: left;
   }
 
-  .contact-page-links a {
+  .contact-page-links a,
+  .contact-page-item {
     font-size: 0.98rem;
     word-break: break-word;
   }
@@ -793,5 +816,9 @@ a {
 
   .page-hero h1 {
     font-size: 2.05rem;
+  }
+
+  .contact-banner-wrap {
+    height: 165px;
   }
 }
