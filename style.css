@@ -18,6 +18,7 @@ body {
   color: #2d241d;
   font-family: "Inter", Arial, sans-serif;
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 img {
@@ -365,8 +366,8 @@ main {
 }
 
 /* =========================================================
-   Bottom Contact Banner / Footer Image
-   Full-width, not distorted, full info visible.
+   Bottom Contact Footer Banner
+   Full width, no stretched text, image as background
 ========================================================= */
 
 .contact-section {
@@ -380,25 +381,65 @@ main {
 }
 
 .contact-banner-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  display: block;
   width: 100vw;
   height: 220px;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
   overflow: hidden;
-  background-color: #f5f1e8;
+  text-decoration: none;
+  background-image: url("images/contact-banner.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
+/* This is no longer used in the updated HTML, but kept hidden for safety */
 .contact-banner-image {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: contain;
-  object-position: center center;
-  background-color: #f5f1e8;
+  display: none;
+}
+
+.contact-footer-content {
+  position: absolute;
+  left: 9%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #2d241d;
+  max-width: 500px;
+  z-index: 2;
+}
+
+.contact-footer-content h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2.7rem;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 12px;
+  color: #2d241d;
+}
+
+.contact-footer-line {
+  width: 360px;
+  height: 1px;
+  background-color: rgba(169, 115, 39, 0.65);
+  margin-bottom: 14px;
+}
+
+.contact-footer-content p {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.34rem;
+  line-height: 1.25;
+  margin-bottom: 6px;
+  color: #2d241d;
+}
+
+.contact-footer-content i {
+  color: #a97327;
+  width: 26px;
+  text-align: center;
+  font-size: 1.15rem;
 }
 
 /* Hide old overlay/card if older contact HTML still exists */
@@ -540,6 +581,11 @@ main {
 
   .contact-banner-wrap {
     height: 205px;
+    background-position: center center;
+  }
+
+  .contact-footer-content {
+    left: 8%;
   }
 }
 
@@ -680,15 +726,33 @@ main {
   }
 
   .contact-banner-wrap {
-    height: 170px;
+    height: 185px;
+    background-position: center center;
   }
 
-  .contact-banner-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center center;
-    display: block;
+  .contact-footer-content {
+    left: 7%;
+    max-width: 390px;
+  }
+
+  .contact-footer-content h2 {
+    font-size: 2.1rem;
+  }
+
+  .contact-footer-line {
+    width: 270px;
+    margin-bottom: 12px;
+  }
+
+  .contact-footer-content p {
+    font-size: 1.08rem;
+    gap: 13px;
+    margin-bottom: 5px;
+  }
+
+  .contact-footer-content i {
+    width: 23px;
+    font-size: 1rem;
   }
 
   .contact-page-links a,
@@ -788,14 +852,34 @@ main {
   }
 
   .contact-banner-wrap {
-    height: 135px;
+    height: 165px;
+    background-position: center center;
   }
 
-  .contact-banner-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center center;
+  .contact-footer-content {
+    left: 6%;
+    max-width: 330px;
+  }
+
+  .contact-footer-content h2 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+  }
+
+  .contact-footer-line {
+    width: 220px;
+    margin-bottom: 10px;
+  }
+
+  .contact-footer-content p {
+    font-size: 0.95rem;
+    gap: 11px;
+    margin-bottom: 4px;
+  }
+
+  .contact-footer-content i {
+    width: 21px;
+    font-size: 0.92rem;
   }
 
   .contact-page-links {
@@ -852,6 +936,30 @@ main {
   }
 
   .contact-banner-wrap {
-    height: 115px;
+    height: 150px;
+    background-position: center center;
+  }
+
+  .contact-footer-content {
+    left: 6%;
+    max-width: 300px;
+  }
+
+  .contact-footer-content h2 {
+    font-size: 1.55rem;
+  }
+
+  .contact-footer-line {
+    width: 190px;
+  }
+
+  .contact-footer-content p {
+    font-size: 0.84rem;
+    gap: 9px;
+  }
+
+  .contact-footer-content i {
+    width: 18px;
+    font-size: 0.84rem;
   }
 }
