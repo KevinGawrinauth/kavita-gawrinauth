@@ -364,90 +364,32 @@ main {
   margin-bottom: 12px;
   color: #3b3027;
 }
-
 /* =========================================================
-   Bottom Contact Footer Banner
-   Full width, no stretched text, image as background
+   Bottom Contact Banner
+   Same outside size, smaller image inside
 ========================================================= */
-
 .contact-section {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  background-color: #f5f1e8;
-  padding: 12px 0 0;
   margin-top: auto;
-  border-top: 1px solid #e6dccd;
+  padding: 6px 0 0;
+  background-color: #f5f1e8;
+  border-top: 1px solid #e1d7c8;
 }
 
 .contact-banner-wrap {
-  position: relative;
   display: block;
-  width: 100vw;
-  height: 220px;
-  overflow: hidden;
-  text-decoration: none;
-  background-image: url("images/contact-banner.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  width: 100%;
+  line-height: 0;
+ 
 }
 
-/* This is no longer used in the updated HTML, but kept hidden for safety */
 .contact-banner-image {
-  display: none;
-}
-
-.contact-footer-content {
-  position: absolute;
-  left: 9%;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #2d241d;
-  max-width: 500px;
-  z-index: 2;
-}
-
-.contact-footer-content h2 {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 2.7rem;
-  font-weight: 500;
-  line-height: 1;
-  margin-bottom: 12px;
-  color: #2d241d;
-}
-
-.contact-footer-line {
-  width: 360px;
-  height: 1px;
-  background-color: rgba(169, 115, 39, 0.65);
-  margin-bottom: 14px;
-}
-
-.contact-footer-content p {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.34rem;
-  line-height: 1.25;
-  margin-bottom: 6px;
-  color: #2d241d;
-}
-
-.contact-footer-content i {
-  color: #a97327;
-  width: 26px;
-  text-align: center;
-  font-size: 1.15rem;
-}
-
-/* Hide old overlay/card if older contact HTML still exists */
-.contact-overlay,
-.contact-overlay-card,
-.contact-label,
-.contact-item {
-  display: none;
+  display: block;
+  width: 94%;
+  height: auto;
+max-height: 265px;
 }
 
 /* =========================================================
@@ -580,12 +522,11 @@ main {
   }
 
   .contact-banner-wrap {
-    height: 205px;
-    background-position: center center;
+    height: 255px;
   }
 
-  .contact-footer-content {
-    left: 8%;
+  .contact-banner-image {
+    object-position: left 72%;
   }
 }
 
@@ -722,37 +663,15 @@ main {
   }
 
   .contact-section {
-    padding: 10px 0 0;
+    padding: 6px 0 0;
   }
 
   .contact-banner-wrap {
-    height: 185px;
-    background-position: center center;
+    height: 220px;
   }
 
-  .contact-footer-content {
-    left: 7%;
-    max-width: 390px;
-  }
-
-  .contact-footer-content h2 {
-    font-size: 2.1rem;
-  }
-
-  .contact-footer-line {
-    width: 270px;
-    margin-bottom: 12px;
-  }
-
-  .contact-footer-content p {
-    font-size: 1.08rem;
-    gap: 13px;
-    margin-bottom: 5px;
-  }
-
-  .contact-footer-content i {
-    width: 23px;
-    font-size: 1rem;
+  .contact-banner-image {
+    object-position: left 72%;
   }
 
   .contact-page-links a,
@@ -848,38 +767,15 @@ main {
   }
 
   .contact-section {
-    padding: 8px 0 0;
+    padding: 5px 0 0;
   }
 
   .contact-banner-wrap {
-    height: 165px;
-    background-position: center center;
+    height: 180px;
   }
 
-  .contact-footer-content {
-    left: 6%;
-    max-width: 330px;
-  }
-
-  .contact-footer-content h2 {
-    font-size: 1.75rem;
-    margin-bottom: 10px;
-  }
-
-  .contact-footer-line {
-    width: 220px;
-    margin-bottom: 10px;
-  }
-
-  .contact-footer-content p {
-    font-size: 0.95rem;
-    gap: 11px;
-    margin-bottom: 4px;
-  }
-
-  .contact-footer-content i {
-    width: 21px;
-    font-size: 0.92rem;
+  .contact-banner-image {
+    object-position: left 72%;
   }
 
   .contact-page-links {
@@ -936,30 +832,10 @@ main {
   }
 
   .contact-banner-wrap {
-    height: 150px;
-    background-position: center center;
+    height: 160px;
   }
 
-  .contact-footer-content {
-    left: 6%;
-    max-width: 300px;
-  }
-
-  .contact-footer-content h2 {
-    font-size: 1.55rem;
-  }
-
-  .contact-footer-line {
-    width: 190px;
-  }
-
-  .contact-footer-content p {
-    font-size: 0.84rem;
-    gap: 9px;
-  }
-
-  .contact-footer-content i {
-    width: 18px;
-    font-size: 0.84rem;
+  .contact-banner-image {
+    object-position: left 72%;
   }
 }
