@@ -28,7 +28,6 @@ a {
   color: inherit;
 }
 
-/* Makes footer/banner stay at bottom on shorter pages */
 main {
   min-height: calc(100vh - 82px);
   display: flex;
@@ -96,12 +95,13 @@ main {
 
 /* =========================================================
    Homepage Hero
+   Shorter page height
 ========================================================= */
 
 .hero-section {
   display: grid;
   grid-template-columns: 48% 52%;
-  min-height: 680px;
+  min-height: 560px;
   background-color: #f7f3eb;
   border-bottom: 1px solid #e1d7c8;
 }
@@ -110,15 +110,37 @@ main {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding: 38px 28px 0;
+  padding: 26px 28px 0;
 }
 
+/* If your HTML still uses arch-frame */
+.arch-frame {
+  width: 100%;
+  max-width: 500px;
+  height: 520px;
+  min-height: 480px;
+  background-color: #ece5db;
+  border: 2px solid #e5dbcc;
+  border-radius: 250px 250px 0 0;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
 
 .hero-text-column {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 42px 68px 42px 46px;
+  padding: 34px 62px 34px 46px;
   background-color: #f8f4ec;
   overflow: hidden;
 }
@@ -148,7 +170,7 @@ main {
 
 .hero-text-inner h1 {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(3.2rem, 5vw, 5rem);
+  font-size: clamp(3rem, 4.6vw, 4.7rem);
   font-weight: 500;
   line-height: 1.02;
   margin-bottom: 18px;
@@ -161,24 +183,25 @@ main {
   letter-spacing: 0.17em;
   text-transform: uppercase;
   color: #a97327;
-  margin-bottom: 26px;
-  line-height: 1.9;
+  margin-bottom: 24px;
+  line-height: 1.8;
 }
 
 .hero-divider {
   width: 100px;
   height: 2px;
   background-color: #a97327;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 }
 
 .hero-text-inner p {
   font-family: "Inter", Arial, sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.03rem;
   color: #3b3027;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   max-width: 600px;
 }
+
 .hero-text-inner .hero-subtitle {
   color: #a97327;
 }
@@ -187,12 +210,12 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  margin-top: 14px;
-  padding: 14px 24px;
+  margin-top: 10px;
+  padding: 13px 22px;
   border: 1px solid #a97327;
   text-decoration: none;
   color: #a97327;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   transition: all 0.2s ease;
@@ -209,7 +232,7 @@ main {
 
 .page-hero {
   background-color: #f7f3eb;
-  padding: 105px 28px 78px;
+  padding: 90px 28px 64px;
   text-align: center;
   border-bottom: 1px solid #e6dccd;
   position: relative;
@@ -249,7 +272,7 @@ main {
 
 .page-hero h1 {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
   font-weight: 500;
   line-height: 1.1;
   color: #2f2319;
@@ -259,7 +282,7 @@ main {
 
 .page-content {
   background-color: #f5f1e8;
-  padding: 82px 28px;
+  padding: 66px 28px;
 }
 
 .page-inner {
@@ -268,9 +291,9 @@ main {
 }
 
 .page-inner p {
-  font-size: 1.12rem;
+  font-size: 1.1rem;
   color: #3b3027;
-  margin-bottom: 26px;
+  margin-bottom: 24px;
 }
 
 .page-inner p:last-child {
@@ -285,13 +308,13 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
-  margin-top: 44px;
+  margin-top: 40px;
 }
 
 .info-card {
   background-color: #f8f4ec;
   border: 1px solid #e1d7c8;
-  padding: 28px;
+  padding: 26px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -319,15 +342,15 @@ main {
 ========================================================= */
 
 .list-block {
-  margin-top: 44px;
-  padding: 34px;
+  margin-top: 40px;
+  padding: 32px;
   background-color: #f8f4ec;
   border: 1px solid #e1d7c8;
 }
 
 .list-block h2 {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 2.4rem;
+  font-size: 2.3rem;
   font-weight: 500;
   margin-bottom: 18px;
   color: #2f2319;
@@ -345,15 +368,25 @@ main {
 
 /* =========================================================
    Bottom Contact Banner / Footer Image
-   Professional full-width footer, shorter height.
+   REDUCED BY ABOUT 2/5
 ========================================================= */
 
 .contact-section {
-  padding: 36px 0 0;
+  background-color: #f5f1e8;
+  padding: 24px 0 0;
+  margin-top: auto;
+  border-top: 1px solid #e6dccd;
+  width: 100%;
 }
 
 .contact-banner-wrap {
-  height: 120px;
+  display: block;
+  width: 100%;
+  height: 150px;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  overflow: hidden;
 }
 
 .contact-banner-image {
@@ -361,7 +394,9 @@ main {
   height: 100%;
   object-fit: cover;
   object-position: left center;
+  display: block;
 }
+
 /* Hide old overlay/card if older contact HTML still exists */
 .contact-overlay,
 .contact-overlay-card,
@@ -486,15 +521,21 @@ main {
 
   .hero-section {
     grid-template-columns: 46% 54%;
+    min-height: 540px;
   }
 
   .hero-text-column {
-    padding: 46px 44px;
+    padding: 40px 42px;
   }
 
   .arch-frame {
-    max-width: 500px;
-    min-height: 540px;
+    max-width: 480px;
+    height: 500px;
+    min-height: 460px;
+  }
+
+  .contact-banner-wrap {
+    height: 140px;
   }
 }
 
@@ -516,17 +557,17 @@ main {
   }
 
   .hero-image-column {
-    padding: 48px 24px 0;
+    padding: 40px 24px 0;
   }
 
   .arch-frame {
-    max-width: 520px;
-    height: 620px;
-    min-height: 520px;
+    max-width: 500px;
+    height: 560px;
+    min-height: 500px;
   }
 
   .hero-text-column {
-    padding: 58px 32px 70px;
+    padding: 48px 32px 56px;
     justify-content: center;
     text-align: left;
   }
@@ -567,26 +608,26 @@ main {
   }
 
   .hero-image-column {
-    padding: 36px 18px 0;
+    padding: 32px 18px 0;
   }
 
   .arch-frame {
-    height: 540px;
-    min-height: 480px;
-    max-width: 500px;
-    border-radius: 240px 240px 0 0;
+    height: 500px;
+    min-height: 450px;
+    max-width: 470px;
+    border-radius: 235px 235px 0 0;
   }
 
   .hero-text-column {
-    padding: 48px 26px 60px;
+    padding: 42px 24px 50px;
   }
 
   .hero-text-inner h1 {
-    font-size: 3.15rem;
+    font-size: 3rem;
   }
 
   .hero-subtitle {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     line-height: 1.7;
     letter-spacing: 0.13em;
     color: #a97327;
@@ -602,15 +643,15 @@ main {
   }
 
   .page-hero {
-    padding: 78px 22px 58px;
+    padding: 72px 22px 52px;
   }
 
   .page-hero h1 {
-    font-size: 2.8rem;
+    font-size: 2.7rem;
   }
 
   .page-content {
-    padding: 58px 22px;
+    padding: 52px 22px;
   }
 
   .page-inner p {
@@ -631,12 +672,19 @@ main {
   }
 
   .contact-section {
-    padding: 48px 0 0;
+    padding: 20px 0 0;
+  }
+
+  .contact-banner-wrap {
+    height: 115px;
   }
 
   .contact-banner-image {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    display: block;
   }
 
   .contact-page-links a,
@@ -676,21 +724,21 @@ main {
   }
 
   .hero-image-column {
-    padding: 28px 14px 0;
+    padding: 26px 14px 0;
   }
 
   .arch-frame {
-    height: 430px;
-    min-height: 390px;
+    height: 410px;
+    min-height: 370px;
     border-radius: 190px 190px 0 0;
   }
 
   .hero-text-column {
-    padding: 40px 20px 50px;
+    padding: 36px 20px 44px;
   }
 
   .hero-text-inner h1 {
-    font-size: 2.65rem;
+    font-size: 2.55rem;
   }
 
   .hero-subtitle {
@@ -700,7 +748,7 @@ main {
 
   .hero-divider {
     width: 80px;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
 
   .hero-text-inner p {
@@ -708,7 +756,7 @@ main {
   }
 
   .page-hero {
-    padding: 64px 18px 48px;
+    padding: 58px 18px 44px;
   }
 
   .page-kicker {
@@ -716,11 +764,11 @@ main {
   }
 
   .page-hero h1 {
-    font-size: 2.35rem;
+    font-size: 2.3rem;
   }
 
   .page-content {
-    padding: 48px 18px;
+    padding: 44px 18px;
   }
 
   .info-card h3 {
@@ -731,13 +779,14 @@ main {
     font-size: 2rem;
   }
 
- .contact-section {
-  padding: 30px 0 0;
-}
+  .contact-section {
+    padding: 18px 0 0;
+  }
 
-.contact-banner-wrap {
-  height: 120px;
-}
+  .contact-banner-wrap {
+    height: 95px;
+  }
+
   .contact-page-links {
     align-items: flex-start;
     text-align: left;
@@ -767,13 +816,13 @@ main {
   }
 
   .arch-frame {
-    height: 370px;
-    min-height: 350px;
-    border-radius: 170px 170px 0 0;
+    height: 350px;
+    min-height: 330px;
+    border-radius: 165px 165px 0 0;
   }
 
   .hero-text-inner h1 {
-    font-size: 2.25rem;
+    font-size: 2.2rem;
   }
 
   .hero-subtitle {
@@ -789,5 +838,9 @@ main {
 
   .page-hero h1 {
     font-size: 2.05rem;
+  }
+
+  .contact-banner-wrap {
+    height: 82px;
   }
 }
