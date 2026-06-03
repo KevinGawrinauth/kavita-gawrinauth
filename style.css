@@ -200,6 +200,9 @@ main {
   margin-bottom: 22px;
   max-width: 600px;
 }
+.hero-text-inner .hero-subtitle {
+  color: #a97327;
+}
 
 .hero-button {
   display: inline-flex;
