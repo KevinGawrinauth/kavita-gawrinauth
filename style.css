@@ -363,9 +363,10 @@ main {
   font-size: 1.06rem;
   margin-bottom: 12px;
   color: #3b3027;
-}/* =========================================================
+}
+/* =========================================================
    Bottom Contact Banner
-   Full-width, responsive height, not locked
+   Full-width, narrow, not stretched
 ========================================================= */
 
 .contact-section {
@@ -373,7 +374,7 @@ main {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   margin-top: auto;
-  padding: 4px 0 0;
+  padding: 6px 0 0;
   background-color: #f5f1e8;
   border-top: 1px solid #e1d7c8;
   overflow: hidden;
@@ -382,9 +383,7 @@ main {
 .contact-banner-wrap {
   display: block;
   width: 100vw;
-  aspect-ratio: 4 / 1;
-  max-height: 230px;
-  min-height: 150px;
+  height: 230px;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -399,9 +398,19 @@ main {
   height: 100%;
   max-width: none;
   object-fit: cover;
-  object-position: left center;
+  object-position: center center;
   margin: 0;
   padding: 0;
+}
+
+/* Hide fake footer text version */
+.contact-footer-content,
+.contact-footer-line,
+.contact-overlay,
+.contact-overlay-card,
+.contact-label,
+.contact-item {
+  display: none !important;
 }
 
 /* =========================================================
