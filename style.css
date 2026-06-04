@@ -366,8 +366,9 @@ main {
 }
 /* =========================================================
    Bottom Contact Banner
-   Same outside size, smaller image inside
+   Full-width, narrow, not stretched
 ========================================================= */
+
 .contact-section {
   width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -376,20 +377,40 @@ main {
   padding: 6px 0 0;
   background-color: #f5f1e8;
   border-top: 1px solid #e1d7c8;
+  overflow: hidden;
 }
 
 .contact-banner-wrap {
   display: block;
-  width: 100%;
+  width: 100vw;
+  height: 230px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   line-height: 0;
- 
+  text-decoration: none;
+  background-color: #f5f1e8;
 }
 
 .contact-banner-image {
   display: block;
-  width: 94%;
-  height: auto;
-max-height: 265px;
+  width: 100vw;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide fake footer text version */
+.contact-footer-content,
+.contact-footer-line,
+.contact-overlay,
+.contact-overlay-card,
+.contact-label,
+.contact-item {
+  display: none !important;
 }
 
 /* =========================================================
