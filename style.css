@@ -824,61 +824,46 @@ main {
 }
 /* =========================================================
    Decorative Corner Flowers
-   CSS-only so they do not become full-size page images
 ========================================================= */
-
 body::before,
 body::after {
   content: "";
   position: fixed;
-  top: 72px;
-  width: 220px;
-  height: 220px;
+  top: 92px; /* raise/lower this if needed */
+  width: 170px;
+  height: 170px;
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: top center;
   pointer-events: none;
-  z-index: 90;
-  opacity: 0.95;
+  z-index: 30;
+  opacity: 1;
 }
 
+/* Left flower */
 body::before {
-  left: 0;
-  background-image: url("images/LeftFlower.jpg");
-  background-position: top left;
-  animation: floatLeftFlower 7s ease-in-out infinite alternate;
+  left: -8px;
+  background-image: url("images/LeftFlower.png");
+  animation: floatLeft 5s ease-in-out infinite;
 }
 
+/* Right flower */
 body::after {
-  right: 0;
-  background-image: url("images/RightFlower.jpg");
-  background-position: top right;
-  animation: floatRightFlower 7s ease-in-out infinite alternate;
+  right: -8px;
+  background-image: url("images/RightFlower.png");
+  animation: floatRight 5s ease-in-out infinite;
+  animation-delay: 0.8s;
 }
 
-@keyframes floatLeftFlower {
-  from {
-    transform: translate(-18px, -8px) rotate(0deg);
-  }
-
-  to {
-    transform: translate(-18px, 2px) rotate(1deg);
-  }
+/* Floating motion */
+@keyframes floatLeft {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  50%  { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
 }
 
-@keyframes floatRightFlower {
-  from {
-    transform: translate(18px, -8px) rotate(0deg);
-  }
-
-  to {
-    transform: translate(18px, 2px) rotate(-1deg);
-  }
-}
-
-/* Hide flowers when saving/printing to PDF */
-@media print {
-  body::before,
-  body::after {
-    display: none !important;
-  }
+@keyframes floatRight {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  50%  { transform: translateY(-8px) rotate(-1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
 }
