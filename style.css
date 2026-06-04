@@ -824,44 +824,54 @@ main {
 }
 /* =========================================================
    Decorative Corner Flowers
+   Website only, not fixed into print/PDF pages
 ========================================================= */
 
 .corner-flower {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 82px;
   width: 230px;
   height: auto;
-  z-index: 95;
+  z-index: 80;
   pointer-events: none;
   opacity: 0.95;
 }
 
 .flower-left {
   left: 0;
+  transform: translate(-18px, -10px);
   animation: floatLeftFlower 7s ease-in-out infinite alternate;
 }
 
 .flower-right {
   right: 0;
+  transform: translate(18px, -10px);
   animation: floatRightFlower 7s ease-in-out infinite alternate;
 }
 
 @keyframes floatLeftFlower {
   from {
-    transform: translateY(0) rotate(0deg);
+    transform: translate(-18px, -10px) rotate(0deg);
   }
 
   to {
-    transform: translateY(8px) rotate(1deg);
+    transform: translate(-18px, -2px) rotate(1deg);
   }
 }
 
 @keyframes floatRightFlower {
   from {
-    transform: translateY(0) rotate(0deg);
+    transform: translate(18px, -10px) rotate(0deg);
   }
 
   to {
-    transform: translateY(8px) rotate(-1deg);
+    transform: translate(18px, -2px) rotate(-1deg);
+  }
+}
+
+/* Hide decorative flowers when printing or saving to PDF */
+@media print {
+  .corner-flower {
+    display: none !important;
   }
 }
