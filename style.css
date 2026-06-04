@@ -350,10 +350,9 @@ main {
   font-size: 1.06rem;
   margin-bottom: 12px;
   color: #3b3027;
-}
-/* =========================================================
-   Bottom Contact Banner
-   Full-width, narrow, not stretched
+}/* =========================================================
+   Bottom Contact Video Banner
+   Full-width, narrow, moving banner
 ========================================================= */
 
 .contact-section {
@@ -361,7 +360,7 @@ main {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   margin-top: auto;
-  padding: 6px 0 0;
+  padding: 4px 0 0;
   background-color: #f5f1e8;
   border-top: 1px solid #e1d7c8;
   overflow: hidden;
@@ -370,7 +369,7 @@ main {
 .contact-banner-wrap {
   display: block;
   width: 100vw;
-  height: 230px;
+  height: 210px;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -379,18 +378,19 @@ main {
   background-color: #f5f1e8;
 }
 
-.contact-banner-image {
+.contact-banner-video {
   display: block;
   width: 100vw;
   height: 100%;
   max-width: none;
   object-fit: cover;
-  object-position: center center;
+  object-position: left center;
   margin: 0;
   padding: 0;
 }
 
-/* Hide fake footer text version */
+/* Hide old image/footer text versions */
+.contact-banner-image,
 .contact-footer-content,
 .contact-footer-line,
 .contact-overlay,
@@ -399,7 +399,6 @@ main {
 .contact-item {
   display: none !important;
 }
-
 /* =========================================================
    Contact Page Links
 ========================================================= */
