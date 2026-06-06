@@ -824,46 +824,82 @@ main {
 }
 /* =========================================================
    Decorative Corner Flowers
+   Higher placement + left/right wave movement
 ========================================================= */
+
 body::before,
 body::after {
   content: "";
   position: fixed;
-  top: 30px; /* raise/lower this if needed */
-  width: 170px;
-  height: 170px;
+
+  /* force higher */
+  top: 82px;
+
+  width: 175px;
+  height: 175px;
+
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: top center;
   pointer-events: none;
-  z-index: 30;
-  opacity: 1;
+
+  /* keep behind nav but above page background */
+  z-index: 20;
+  opacity: 0.95;
+
+  /* helps hide white/checker background */
+  mix-blend-mode: multiply;
 }
 
 /* Left flower */
 body::before {
-  left: -8px;
+  left: -18px;
   background-image: url("images/LeftFlower.png");
-  animation: floatLeft 5s ease-in-out infinite;
+  background-position: top left;
+  animation: waveLeft 5.5s ease-in-out infinite;
 }
 
 /* Right flower */
 body::after {
-  right: -8px;
+  right: -18px;
   background-image: url("images/RightFlower.png");
-  animation: floatRight 5s ease-in-out infinite;
-  animation-delay: 0.8s;
+  background-position: top right;
+  animation: waveRight 5.5s ease-in-out infinite;
+  animation-delay: 0.7s;
 }
 
-/* Floating motion */
-@keyframes floatLeft {
-  0%   { transform: translateY(0px) rotate(0deg); }
-  50%  { transform: translateY(-8px) rotate(1deg); }
-  100% { transform: translateY(0px) rotate(0deg); }
+/* Side-to-side wave motion */
+@keyframes waveLeft {
+  0% {
+    transform: translateX(0) translateY(-18px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(12px) translateY(-18px) rotate(1deg);
+  }
+
+  100% {
+    transform: translateX(0) translateY(-18px) rotate(0deg);
+  }
 }
 
-@keyframes floatRight {
-  0%   { transform: translateY(0px) rotate(0deg); }
-  50%  { transform: translateY(-8px) rotate(-1deg); }
-  100% { transform: translateY(0px) rotate(0deg); }
+@keyframes waveRight {
+  0% {
+    transform: translateX(0) translateY(-18px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(-12px) translateY(-18px) rotate(-1deg);
+  }
+
+  100% {
+    transform: translateX(0) translateY(-18px) rotate(0deg);
+  }
+}
+
+/* Hide flowers when printing/saving to PDF */
+@media print {
+  body::before,
+  body::after {
+    display: none !important;
+  }
 }
