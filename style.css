@@ -1031,3 +1031,19 @@ body::after {
     letter-spacing: 0.08em !important;
   }
 }
+.info-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.info-card-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(65, 45, 25, 0.12);
+}
+
+.info-card-link h3,
+.info-card-link p {
+  color: inherit;
+}
