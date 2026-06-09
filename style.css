@@ -1047,3 +1047,20 @@ body::after {
 .info-card-link p {
   color: inherit;
 }
+.info-card-link {
+  display: block;
+  text-decoration: none !important;
+  color: inherit;
+  cursor: pointer;
+}
+
+.info-card-link h3,
+.info-card-link p {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.info-card-link:hover h3,
+.info-card-link:hover p {
+  text-decoration: none !important;
+}
