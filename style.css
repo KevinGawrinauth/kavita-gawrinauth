@@ -1022,3 +1022,126 @@ body::after {
     display: none !important;
   }
 }
+/* =========================================================
+   FINAL HEADER OVERRIDE
+   Cleaner desktop + mobile header
+========================================================= */
+
+.site-header {
+  width: 100%;
+  background-color: #f5f1e8;
+  border-bottom: 1px solid #ded4c6;
+  padding: 18px 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+  position: relative;
+  z-index: 1000;
+}
+
+.site-brand a {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.75rem !important;
+  font-weight: 500;
+  letter-spacing: 0.12em !important;
+  color: #2f2118;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-menu {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 22px !important;
+  flex-wrap: nowrap !important;
+}
+
+.nav-menu a {
+  font-family: "Inter", sans-serif;
+  font-size: 0.74rem !important;
+  font-weight: 500;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase;
+  color: #2f2118;
+  text-decoration: none;
+  padding-bottom: 7px !important;
+  border-bottom: 2px solid transparent;
+  transition: color 0.25s ease, border-color 0.25s ease;
+  white-space: nowrap;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: #a97327;
+  border-bottom-color: #a97327;
+}
+
+/* Medium screens */
+@media (max-width: 1150px) {
+  .site-header {
+    padding: 18px 28px !important;
+    gap: 20px !important;
+  }
+
+  .site-brand a {
+    font-size: 1.45rem !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  .nav-menu {
+    gap: 16px !important;
+  }
+
+  .nav-menu a {
+    font-size: 0.68rem !important;
+    letter-spacing: 0.1em !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 850px) {
+  .site-header {
+    padding: 18px 20px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 14px !important;
+  }
+
+  .site-brand a {
+    font-size: 1.45rem !important;
+    letter-spacing: 0.1em !important;
+    text-align: center;
+  }
+
+  .nav-menu {
+    width: 100% !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px 16px !important;
+  }
+
+  .nav-menu a {
+    font-size: 0.66rem !important;
+    letter-spacing: 0.09em !important;
+    padding-bottom: 5px !important;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 420px) {
+  .site-brand a {
+    font-size: 1.18rem !important;
+  }
+
+  .nav-menu {
+    gap: 8px 13px !important;
+  }
+
+  .nav-menu a {
+    font-size: 0.6rem !important;
+    letter-spacing: 0.08em !important;
+  }
+}
