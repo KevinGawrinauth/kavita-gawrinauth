@@ -1278,3 +1278,218 @@ body::after {
     width: 100%;
   }
 }
+
+/* =========================================================
+   Music Landing Page
+========================================================= */
+
+.music-introduction {
+  max-width: 800px;
+}
+
+.music-feature-section {
+  margin-top: 58px;
+}
+
+.music-section-label {
+  color: #a97327 !important;
+  font-size: 0.76rem !important;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  margin-bottom: 12px !important;
+}
+
+.music-feature-card {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 28px;
+  padding: 36px;
+  background-color: #f8f4ec;
+  border: 1px solid #e1d7c8;
+  color: inherit;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.music-feature-card:hover {
+  transform: translateY(-4px);
+  border-color: #c8a36e;
+  box-shadow: 0 16px 36px rgba(65, 45, 25, 0.1);
+}
+
+.music-feature-icon {
+  width: 76px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #c8a36e;
+  border-radius: 50%;
+  color: #a97327;
+  font-size: 1.55rem;
+}
+
+.music-feature-content h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 1.12;
+  color: #2f2319;
+  margin-bottom: 8px;
+}
+
+.music-feature-translation {
+  color: #a97327 !important;
+  font-style: italic;
+  margin-bottom: 18px !important;
+}
+
+.music-feature-credit {
+  font-size: 0.94rem !important;
+  font-style: italic;
+}
+
+.music-feature-link {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 8px;
+  color: #a97327;
+  font-size: 0.75rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   Individual Music Piece
+========================================================= */
+
+.music-back-link {
+  display: inline-block;
+  margin-bottom: 34px;
+  color: #a97327;
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.music-back-link:hover {
+  text-decoration: underline;
+}
+
+.recording-card {
+  margin: 48px 0;
+  padding: 36px;
+  background-color: #f8f4ec;
+  border: 1px solid #e1d7c8;
+}
+
+.recording-card h2,
+.lyrics-section h2,
+.music-reflection h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2.45rem;
+  font-weight: 500;
+  line-height: 1.12;
+  color: #2f2319;
+  margin-bottom: 10px;
+}
+
+.recording-translation {
+  color: #a97327 !important;
+  font-style: italic;
+}
+
+.recording-credit {
+  font-size: 0.96rem !important;
+}
+
+.music-audio-player {
+  display: block;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.music-interpretation {
+  margin-bottom: 70px;
+}
+
+.lyrics-section {
+  margin-top: 70px;
+  padding-top: 12px;
+}
+
+.lyrics-note {
+  font-style: italic;
+  color: #6e5c4e !important;
+  margin-bottom: 40px !important;
+}
+
+.lyrics-block {
+  padding: 30px 0;
+}
+
+.hindi-line {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.45rem !important;
+  font-weight: 500;
+  line-height: 1.45;
+  color: #2f2319 !important;
+  margin-bottom: 8px !important;
+}
+
+.english-line {
+  font-size: 1rem !important;
+  color: #6b594c !important;
+  font-style: italic;
+  margin-bottom: 28px !important;
+}
+
+.lyrics-divider {
+  width: 70px;
+  height: 1px;
+  background-color: #c8a36e;
+  margin: 8px auto;
+}
+
+.music-reflection {
+  margin-top: 72px;
+  padding-top: 42px;
+  border-top: 1px solid #ded4c6;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .music-feature-card {
+    grid-template-columns: 1fr;
+    padding: 26px 22px;
+  }
+
+  .music-feature-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .music-feature-content h2 {
+    font-size: 1.9rem;
+  }
+
+  .recording-card {
+    padding: 26px 20px;
+  }
+
+  .recording-card h2,
+  .lyrics-section h2,
+  .music-reflection h2 {
+    font-size: 2rem;
+  }
+
+  .hindi-line {
+    font-size: 1.3rem !important;
+  }
+}
+
