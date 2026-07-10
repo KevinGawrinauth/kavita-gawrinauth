@@ -1513,3 +1513,11 @@ body::after {
   }
 }
 
+.music-video-player {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 24px;
+  border: 1px solid #e1d7c8;
+  background-color: #000;
+}
