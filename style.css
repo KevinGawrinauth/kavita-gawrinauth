@@ -1521,3 +1521,14 @@ body::after {
   border: 1px solid #e1d7c8;
   background-color: #000;
 }
+.music-video-embed {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.music-video-embed iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
