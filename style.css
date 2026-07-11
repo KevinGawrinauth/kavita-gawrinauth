@@ -1408,11 +1408,6 @@ body::after {
   font-size: 0.96rem !important;
 }
 
-.music-audio-player {
-  display: block;
-  width: 100%;
-  margin-top: 24px;
-}
 
 .music-interpretation {
   margin-bottom: 70px;
