@@ -1527,3 +1527,21 @@ body::after {
     aspect-ratio: 16 / 9;
     border: none;
 }
+.archive-photo-figure {
+  margin: 0 0 28px;
+}
+
+.archive-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #e1d7c8;
+}
+
+.archive-photo-figure figcaption {
+  margin-top: 10px;
+  color: #6b594c;
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.5;
+}
