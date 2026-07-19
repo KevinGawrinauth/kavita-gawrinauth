@@ -1545,3 +1545,16 @@ body::after {
   font-style: italic;
   line-height: 1.5;
 }
+.archive-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #e1d7c8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: zoom-in;
+}
+
+.archive-photo:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
